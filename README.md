@@ -1,5 +1,3 @@
-Mobile version of inSofia Today
-====================
 # Description
 This is the mobile version of the site http: //insofiya.today. It provides a simple and convenient way to work with the system for people who mainly used their smart phones rather than computers.
 
