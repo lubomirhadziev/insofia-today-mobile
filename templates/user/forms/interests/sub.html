@@ -1,0 +1,30 @@
+<ion-view class="interests" class="" title="Интереси">
+
+    <ion-content class="has-header" padding="true">
+        <!--        <div class="row inside-logo ">
+                    <div class="col col-100 col-center text-center">
+                        <img src="./img/logo.png" height="75" />
+                    </div>
+                </div>-->
+
+        <ion-refresher
+            pulling-text="Дръпни за обновяване..."
+            on-refresh="loadMainInterests(true)">
+        </ion-refresher>
+
+        <p style="color: #FFF;text-align: center;padding-top: 8px;font-size: 17px;">
+            Разширете Вашите интереси като изберете допълнително интереси от главните интереси, които сте избрали.
+        </p>
+
+        <ul class="list interests-list">
+
+            <li ng-repeat="interest in mainInterests" ng-click="openSubInterestModal(interest.id)" class="item">
+                {{ interest.title}}
+                <span class="badge badge-assertive">{{ countSelectedSubInterests(interest.id) }}</span>
+            </li>
+
+        </ul>
+
+        <br />
+    </ion-content>
+</ion-view>

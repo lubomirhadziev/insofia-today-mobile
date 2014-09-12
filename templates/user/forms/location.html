@@ -1,0 +1,59 @@
+<ion-view class="" title="Локация">
+    <ion-nav-buttons side="right">
+        <button class="button button-icon btn-save" ng-click="doForm()">
+            <i class="ion ion-ios7-checkmark-outline"></i>
+            Запази
+        </button>
+    </ion-nav-buttons>
+    <div class="bar bar-footer custom-bar-stable hide-on-keyboard-open">
+        <div class="title title-help">
+            <button class="button button-icon" ng-click="informationModals('location')">
+                <i class="ion ion-ios7-information-outline icon-help"></i>
+                Информация
+            </button>
+        </div>
+    </div>
+
+    <ion-content class="has-header" padding="true">
+        <!--        <div class="row inside-logo ">
+                    <div class="col col-100 col-center text-center">
+                        <img src="./img/logo.png" height="75" />
+                    </div>
+                </div>-->
+
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Къде живееш?</span>
+                <!--<input type="text" ng-click="openNeighborhoodModal('living')" readonly="readonly" ng-model="form.neigh_living">-->
+                <br />
+                <select ng-model="form.living_neighborhood_id" name="" style="width:100%;">
+                    <option value="0">- Изберете опция -</option>
+                    <option ng-repeat="neighborhood in neighborhoods" value="{{ neighborhood.id}}">{{ neighborhood.title}}</option>
+                </select>
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Къде учиш?</span>
+                <!--<input type="text" ng-click="openNeighborhoodModal('learning')" readonly="readonly" ng-model="form.neigh_learning">-->
+                <br />
+                <select ng-model="form.learning_neighborhood_id" name="" style="width:100%;">
+                    <option value="0">- Изберете опция -</option>
+                    <option ng-repeat="neighborhood in neighborhoods" value="{{ neighborhood.id}}">{{ neighborhood.title}}</option>
+                </select>
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Къде работиш?</span>
+                <!--<input type="text" ng-click="openNeighborhoodModal('working')" readonly="readonly" ng-model="form.neigh_working">-->
+                <br />
+                <select ng-model="form.working_neighborhood_id" name="" style="width:100%;">
+                    <option value="0">- Изберете опция -</option>
+                    <option ng-repeat="neighborhood in neighborhoods" value="{{ neighborhood.id}}">{{ neighborhood.title}}</option>
+                </select>
+            </label>
+        </div>
+        
+        <br />
+        <br />
+    </ion-content>
+</ion-view>

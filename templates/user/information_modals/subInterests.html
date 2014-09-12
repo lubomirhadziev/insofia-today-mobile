@@ -1,0 +1,35 @@
+<ion-modal-view class="interests custom-modal2">
+    <ion-header-bar class="custom-bar-stable">
+        <h1 class="title">Интереси</h1>
+        <button class="button button-icon" ng-click="closeNeighborhoodModal()">
+            Затвори
+        </button>
+    </ion-header-bar>
+
+    <div class="bar bar-header item-input-inset">
+        <label class="item-input-wrapper" style="background: none;font-size: 17px;color: #858585;">
+            {{ modalTitle }}
+            <!--<i class="icon ion-ios7-search placeholder-icon"></i>-->
+            <!--<input type="search" ng-model="q" placeholder="Търси по име на интереса">-->
+        </label>
+        <button class="button button-clear" ng-click="closeSubInterestsModal()">
+            Затвори
+        </button>
+    </div>
+
+    <ion-content class="neighborhoods-modal-content">
+        <ul class="list">
+
+            <li ng-repeat="interest in subInterestModal" class="item item-checkbox">
+                <label class="checkbox" ng-click="updateSubInterests()">
+                    <input type="checkbox"
+                           ng-checked="interest.checked" 
+                           ng-model="checked[interest.id]"
+                           value="1" />
+                </label>
+                {{ interest.title}}
+            </li>
+
+        </ul>
+    </ion-content>
+</ion-modal-view>

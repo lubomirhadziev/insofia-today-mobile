@@ -1,0 +1,45 @@
+<ion-view class="vertical-center" title="Регистрация">
+    <ion-content padding="true">
+
+        <div class="row">
+            <div class="col col-100 col-center text-center">
+                <img src="./img/logo.png" height="75" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-100 col-center text-center welcomeMessage">
+                СЪЗДАЙ НОВ ПРОФИЛ
+                <p style="padding-top: 10px;font-weight: none;">
+                    Попълнете Вашите данни за да Ви регистрираме
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-90 col-center" style="margin: 0 auto;">
+                <form ng-submit="doRegister()">
+                    <label class="item-input">
+                        <input class="btn-login" ng-focus="" style="text-align: center" placeholder="Име и фамилия" type="text" ng-model="registerData.name">
+                    </label>
+                    <label class="item-input">
+                        <input class="btn-login" ng-focus="" style="text-align: center" placeholder="E-Mail адрес" type="text" ng-model="registerData.email">
+                    </label>
+                    <label class="item-input">
+                        <input class="btn-login" ng-focus="" style="text-align: center" placeholder="******" type="password" ng-model="registerData.password">
+                    </label>
+                    <label>
+                        <button class="button button-block button-assertive" type="submit">Регистрирай ме</button>
+                    </label>
+                </form>
+
+                <a href="#/no_side/login">
+                    <p class="p-reset-password">
+                        <small>Вече имате профил в inSofia?</small>
+                    </p>
+                </a>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>
