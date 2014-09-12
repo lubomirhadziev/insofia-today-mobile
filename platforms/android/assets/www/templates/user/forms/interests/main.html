@@ -1,0 +1,43 @@
+<ion-view class="interests" title="Интереси">
+    <ion-nav-buttons side="right">
+        <button class="button button-icon btn-save" style="font-size: 13px;" ng-click="doForm()">
+            <i class="ion ion-ios7-checkmark-outline"></i>
+            Запази
+        </button>
+    </ion-nav-buttons>
+
+    <div class="bar bar-footer custom-bar-stable hide-on-keyboard-open">
+        <div class="title title-help">
+            <button class="button button-icon" ng-click="informationModals('mainInterests')">
+                <i class="ion ion-ios7-information-outline icon-help"></i>
+                Информация
+            </button>
+        </div>
+    </div>
+
+    <ion-content class="has-header" padding="true">
+        <!--        <div class="row inside-logo ">
+                    <div class="col col-100 col-center text-center">
+                        <img src="./img/logo.png" height="75" />
+                    </div>
+                </div>-->
+
+        <ion-refresher
+            pulling-text="Дръпни за обновяване..."
+            on-refresh="loadMainInterests()">
+        </ion-refresher>
+
+        <ul class="list interests-list">
+
+            <li ng-repeat="interest in form" class="item item-checkbox">
+                <label class="checkbox">
+                    <input type="checkbox" name="interest" ng-checked="newForm[interest.id]" ng-model="newForm[interest.id]" value="1">
+                </label>
+                {{ interest.title}}
+            </li>
+
+        </ul>
+
+        <br />
+    </ion-content>
+</ion-view>

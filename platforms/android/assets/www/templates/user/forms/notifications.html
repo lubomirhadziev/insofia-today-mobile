@@ -1,0 +1,61 @@
+<ion-view class="" title="Известия">
+    <ion-nav-buttons side="right">
+        <button class="button button-icon btn-save" style="font-size: 13px;" ng-click="doForm()">
+            <i class="ion ion-ios7-checkmark-outline"></i>
+            Запази
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content class="has-header" padding="true">
+        <!--        <div class="row inside-logo ">
+                    <div class="col col-100 col-center text-center">
+                        <img src="./img/logo.png" height="75" />
+                    </div>
+                </div>-->
+
+        <ul class="list notifications-list">
+
+            <li class="item item-toggle toggle-energized">
+                Нови покани
+                <label class="toggle toggle-assertive">
+                    <input type="checkbox" name="invite" value="1" ng-model="form.invite" ng-checked="form.invite">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+
+            <li class="item item-toggle toggle-energized">
+                Новости в inSofia Today
+                <label class="toggle toggle-assertive">
+                    <input type="checkbox" name="news_insofia" value="1" ng-model="form.news_insofia" ng-checked="form.news_insofia">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+
+            <li class="item item-toggle">
+                Новини от обекти
+                <label class="toggle toggle-assertive">
+                    <input type="checkbox" name="objects_interests" value="1" ng-model="form.objects_interests" ng-checked="form.objects_interests">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+
+            <li class="item item-toggle">
+                Нови съобщения
+                <label class="toggle toggle-assertive">
+                    <input type="checkbox" name="new_msg" value="1" ng-model="form.new_msg" ng-checked="form.new_msg">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+
+        </ul>
+
+    </ion-content>
+</ion-view>

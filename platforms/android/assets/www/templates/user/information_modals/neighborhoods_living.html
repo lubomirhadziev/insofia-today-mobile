@@ -1,0 +1,38 @@
+<ion-modal-view class="custom-modal2">
+    <ion-header-bar class="custom-bar-stable">
+        <h1 class="title">Къде живееш?</h1>
+        <button class="button button-icon" ng-click="closeNeighborhoodModal()">
+            Затвори
+        </button>
+    </ion-header-bar>
+
+    <div class="bar bar-header item-input-inset">
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios7-search placeholder-icon"></i>
+            <input type="search" ng-model="q" placeholder="Търси по име на квартала">
+        </label>
+        <button class="button button-clear" ng-click="closeNeighborhoodModal()">
+            Затвори
+        </button>
+    </div>
+
+    <ion-content class="neighborhoods-modal-content">
+        <div class="list">
+
+            <label ng-repeat="neighborhood in neighborhoods | filter:q" class="item item-radio">
+                <input type="radio" name="neighborhood" ng-model="form.living_neighborhood_id" value="{{ neighborhood.id }}">
+                <div class="item-content">
+                    {{ neighborhood.title}}
+                </div>
+                <i class="radio-icon ion-checkmark"></i>
+            </label>
+            
+            <label ng-if="results.length === 0" class="item item-radio">
+                <div class="item-content">
+                    Няма намерени квартали
+                </div>
+            </label>
+
+        </div>
+    </ion-content>
+</ion-modal-view>

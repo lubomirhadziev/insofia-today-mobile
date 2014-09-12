@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.ionicframework.insofiamobile339728" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+	<name>inSofia Today</name>
+	<description>
+        inSofia Today е единствения интернет проект в България, който Ви позволява да опитате продукти и услуги напълно безплатно.
+    </description>
+	<author email="lubomir.hadziev@gmail.com" href="http://www.positivecreations.bg">
+      Positive Creations Team
+    </author>
+  <content src="index.html"/>
+  <access origin="*" />
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="SplashScreenDelay" value="3800"/>
+  <feature name="StatusBar">
+    <param name="ios-package" value="CDVStatusBar" onload="true"/>
+  </feature>
+</widget>

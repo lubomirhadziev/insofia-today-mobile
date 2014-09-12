@@ -1,0 +1,58 @@
+<ion-view class="" title="Профил">
+    <ion-nav-buttons side="right">
+        <button class="button button-icon btn-save" ng-click="doForm()">
+            <i class="ion ion-ios7-checkmark-outline"></i>
+            Запази
+        </button>
+    </ion-nav-buttons>
+    <div class="bar bar-footer custom-bar-stable hide-on-keyboard-open">
+        <div class="title title-help">
+            <button class="button button-icon" ng-click="informationModals('profile')">
+                <i class="ion ion-ios7-information-outline icon-help"></i>
+                Информация
+            </button>
+        </div>
+    </div>
+
+    <ion-content class="has-header" padding="true">
+<!--        <div class="row inside-logo ">
+            <div class="col col-100 col-center text-center">
+                <img src="./img/logo.png" height="75" />
+            </div>
+        </div>-->
+
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label" style="margin-bottom: 10px">Пол</span>
+                <div style="clear:both"></div>
+
+                <label class="sex_label" ng-click="sexLabelClicked('ion-man', 'ion-woman')">
+                    <input hidden="hidden" type="radio" name="sex" ng-model="form.sex" value="1" />
+                    <i class="ion ion-man sex_icon"></i>
+                    <span class="sex_span">Мъж</span>
+                </label>
+
+                <label class="sex_label" ng-click="sexLabelClicked('ion-woman', 'ion-man')">
+                    <input hidden="hidden" type="radio" name="sex" ng-model="form.sex" value="2" />
+                    <i class="ion ion-woman sex_icon"></i>
+                    <span class="sex_span">Жена</span>
+                </label>
+
+                <div style="clear:both"></div>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Дата на раждане</span>
+                <input type="date" style="width:100%;" ng-model="form.birthday">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Телефон</span>
+                <input type="text" ng-model="form.phone">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Алтернативен E-Mail адрес</span>
+                <input type="text" ng-model="form.alternative_email">
+            </label>
+        </div>
+
+    </ion-content>
+</ion-view>
